@@ -235,4 +235,8 @@ return {
       })
     end,
   },
+  {
+    "nvim-neorg/neorg",
+    opts = {}
+  }
 }
