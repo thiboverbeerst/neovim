@@ -1,4 +1,3 @@
-local telescope = require("telescope")
 
 -- [ Why configure plugin in a core.plugins file? ]
 -- When settings are closer to the plugin it's less prone to errors
@@ -37,7 +36,7 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
-      telescope.load_extension("file_browser")
+      require("telescope").load_extension("file_browser")
     end,
   }
 }
