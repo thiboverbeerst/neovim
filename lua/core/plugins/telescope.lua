@@ -69,6 +69,7 @@ return {
                 ["<c-d>"] = fb_actions.remove,
                 ["<c-p>"] = fb_actions.move,
                 ["<c-y>"] = fb_actions.copy,
+                ["<c-h>"] = fb_actions.toggle_hidden,
                 ["<c-a>"] = fb_actions.toggle_all,
               },
               ["n"] = {
@@ -78,6 +79,7 @@ return {
                 ["<c-d>"] = fb_actions.remove,
                 ["<c-p>"] = fb_actions.move,
                 ["<c-y>"] = fb_actions.copy,
+                ["<c-h>"] = fb_actions.toggle_hidden,
                 ["<c-a>"] = fb_actions.toggle_all,
               },
             },
