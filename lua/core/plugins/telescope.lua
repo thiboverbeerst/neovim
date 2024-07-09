@@ -11,6 +11,7 @@ local function neovim_conf_files()
 end
 
 
+-- Using git files will prevent searching inside dir like node_modules, ...
 local function project_files()
   local path = vim.loop.cwd() .. "/.git"
   if funcs.path_exists(path) then
