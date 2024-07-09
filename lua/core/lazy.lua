@@ -27,7 +27,7 @@ require("lazy").setup("core.plugins", {
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { missing = false },
+  install = { missing = false }, -- don't install missing plugins on startup = manually
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
