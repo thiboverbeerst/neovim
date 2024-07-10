@@ -64,8 +64,14 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
 -- Set highlight on search
 vim.opt.hlsearch = true
+
+-- folding
+vim.opt.foldmethod = "expr" -- how folds are determined (indent, syntax, ...)
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter to determine folds (could be lsp, but not every lang is configured with lsp)
+vim.opt.foldcolumn = "0" -- don't take extra space to show folding info
+vim.opt.foldtext = "" -- highlight first line of fold
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
+vim.opt.foldnestmax = 4 -- limits how deep you can fold - folding something 20 levels deep is rare...
