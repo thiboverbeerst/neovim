@@ -16,6 +16,13 @@ return {
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
       }
     },
+    dependencies = {
+       "pysan3/pathlib.nvim",
+	"MunifTanjim/nui.nvim",
+	"nvim-neotest/nvim-nio",
+	"nvim-neorg/lua-utils.nvim",
+	"nvim-lua/plenary.nvim"
+    }
   },
 }
 
