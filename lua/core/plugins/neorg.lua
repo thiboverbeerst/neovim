@@ -17,8 +17,5 @@ return {
       }
     },
   },
-  -- A Collection of Lua Utilities for Neovim
-  -- https://github.com/nvim-neorg/lua-utils.nvim
-  { "nvim-neorg/lua-utils.nvim" }, 
 }
 
