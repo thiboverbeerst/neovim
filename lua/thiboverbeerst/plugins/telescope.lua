@@ -37,7 +37,6 @@ return {
       { "<leader>ff", "<cmd>" .. project_files() .. "<cr>", desc = "Find File" },
       { "<leader>fF", "<cmd>Telescope find_files<cr>", desc = "Find File (ignore git)" },
       { "<leader>fp", "<cmd>" .. neovim_conf_files() .. "<cr>", desc = "Find Neovim Config File" },
-      { "<leader>fb", "<cmd>Telescope file_browser grouped=true<cr>", desc = "Filebrowser" },
       -- search stuff
       { "<leader>ss", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
     },
@@ -51,43 +50,5 @@ return {
       }, 
     },
   },
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-    config = function()
-      local fb_actions = require("telescope").extensions.file_browser.actions
-      require("telescope").setup({
-        extensions = {
-          file_browser = {
-            -- disables netrw and use telescope-file-browser in its place
-            hijack_netrw = true,
-            mappings = {
-              ["i"] = {
-                -- your custom insert mode mappings
-                ["<c-n>"] = fb_actions.create,
-                ["<c-r>"] = fb_actions.rename,
-                ["<c-d>"] = fb_actions.remove,
-                ["<c-p>"] = fb_actions.move,
-                ["<c-y>"] = fb_actions.copy,
-                ["<c-h>"] = fb_actions.toggle_hidden,
-                ["<c-a>"] = fb_actions.toggle_all,
-              },
-              ["n"] = {
-                -- your custom normal mode mappings
-                ["<c-n>"] = fb_actions.create,
-                ["<c-r>"] = fb_actions.rename,
-                ["<c-d>"] = fb_actions.remove,
-                ["<c-p>"] = fb_actions.move,
-                ["<c-y>"] = fb_actions.copy,
-                ["<c-h>"] = fb_actions.toggle_hidden,
-                ["<c-a>"] = fb_actions.toggle_all,
-              },
-            },
-          },
-        },
-      })
-      require("telescope").load_extension("file_browser")
-    end,
-  }
-}
+ }
 
