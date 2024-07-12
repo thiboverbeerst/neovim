@@ -68,10 +68,10 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 
 -- folding
-vim.opt.foldmethod = "expr" -- how folds are determined (indent, syntax, ...)
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter to determine folds (could be lsp, but not every lang is configured with lsp)
-vim.opt.foldcolumn = "0" -- don't take extra space to show folding info
-vim.opt.foldtext = "" -- highlight first line of fold
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 1
-vim.opt.foldnestmax = 4 -- limits how deep you can fold - folding something 20 levels deep is rare...
+-- vim.opt.foldmethod = "expr" -- how folds are determined (indent, syntax, ...)
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter to determine folds (could be lsp, but not every lang is configured with lsp)
+-- vim.opt.foldcolumn = "0" -- don't take extra space to show folding info
+-- vim.opt.foldtext = "" -- highlight first line of fold
+-- vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 1
+-- vim.opt.foldnestmax = 4 -- limits how deep you can fold - folding something 20 levels deep is rare...

@@ -1,4 +1,4 @@
-local funcs = require("utils.functions")
+local funcs = require("thiboverbeerst.utils.functions")
 
 -- [ Why configure plugin in a core.plugins file? ]
 -- When settings are closer to the plugin it's less prone to errors

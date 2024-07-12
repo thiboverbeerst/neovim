@@ -19,8 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup(
   {
-    {import = "core.plugins"},
-    {import = "core.plugins.dependencies"},
+    {import = "thiboverbeerst.plugins"},
+    {import = "thiboverbeerst.plugins.dependencies"},
   },
   {
     defaults = {
