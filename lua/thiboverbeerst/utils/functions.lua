@@ -1,10 +1,10 @@
-local funcs = {}
+local M = {}
 
 ---notify
 ---@param message string
 ---@param level integer
 ---@param title string
-funcs.notify = function(message, level, title)
+M.notify = function(message, level, title)
   local notify_options = {
     title = title,
     timeout = 2000,
@@ -15,7 +15,7 @@ end
 -- This function safely navigates through a nested configuration table to retrieve a value. 
 -- It takes a configuration table (config) and a variable number of additional arguments (...) representing
 -- the path to the desired value within the table. It returns nil if any part of the path does not exist.
-funcs.safe_nested_config = function(config, ...)
+M.safe_nested_config = function(config, ...)
   local elements = { ... }
   local node = config
   for i = 1, #elements do
@@ -28,8 +28,8 @@ funcs.safe_nested_config = function(config, ...)
 end
 
 --- Check if path exists
-funcs.path_exists = function(path)
+M.path_exists = function(path)
   return vim.loop.fs_stat(path)
 end
 
-return funcs
+return M
