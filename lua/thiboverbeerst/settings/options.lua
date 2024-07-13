@@ -20,7 +20,16 @@ vim.opt.showmode = false
 --  See `:help 'clipboard'`
 vim.opt.clipboard = 'unnamedplus'
 
--- Enable break indent
+-- vim fix your tabs
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- indent based on syntax/style
+vim.opt.smartindent = true
+
+-- It causes wrapped lines to be indented to line up with the start of the line
 vim.opt.breakindent = true
 
 -- Save undo history
@@ -57,7 +66,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 8
 
 -- Set highlight on search
 vim.opt.hlsearch = true
