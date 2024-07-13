@@ -1,5 +1,8 @@
 local funcs = require("thiboverbeerst.utils.functions")
 
+-- open netrw file browser (fb)
+vim.keymap.set("n", "<leader>fb", vim.cmd.Ex)
+
 -- Clear search highlight on pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
