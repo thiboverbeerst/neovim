@@ -87,3 +87,12 @@ end, {})
 -- [[ Undotree ]]
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
 
+
+-- [[ CMP ]]
+local cmp = require('cmp')
+vim.keymap.set('i', '<C-k>', cmp.mapping.select_prev_item(), { desc = 'Select previous item' })
+vim.keymap.set('i', '<C-j>', cmp.mapping.select_next_item(), { desc = 'Select next item' })
+vim.keymap.set('i', '<C-y>', cmp.mapping.confirm({ select = true }), { desc = 'Confirm selection' })
+vim.keymap.set('i', '<C-Space>', cmp.mapping.complete(), { desc = 'Trigger completion' })
+
+
