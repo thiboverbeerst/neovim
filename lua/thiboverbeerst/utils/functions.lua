@@ -32,4 +32,18 @@ M.path_exists = function(path)
   return vim.loop.fs_stat(path)
 end
 
+
+M.read_searchignore = function()
+  local ignore_file = vim.loop.cwd() .. "/.searchignore"
+  local ignore_patterns = {}
+
+  if M.path_exists(ignore_file) then
+    for line in io.lines(ignore_file) do
+      table.insert(ignore_patterns, line)
+    end
+  end
+
+  return ignore_patterns
+end
+
 return M

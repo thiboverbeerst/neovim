@@ -43,10 +43,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Find file with git files (if exists; this will ingore files there are ignored in git. e.g. node_modules)
 vim.keymap.set('n', '<leader>ff', function()
   local path = vim.loop.cwd() .. "/.git"
+  local ignore_patterns = funcs.read_searchignore()
+
   if funcs.path_exists(path) then
-    require('telescope.builtin').git_files({ show_untracked = true })
+    require('telescope.builtin').git_files({ show_untracked = true, file_ignore_patterns = ignore_patterns })
   else
-    require('telescope.builtin').find_files()
+    require('telescope.builtin').find_files({ file_ignore_patterns = ignore_patterns })
   end
 end, { desc = 'Fuzzy find file in working directory' })
 
