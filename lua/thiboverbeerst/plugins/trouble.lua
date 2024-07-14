@@ -8,7 +8,7 @@ return {
     config = function()
       require("trouble").setup({
         icons = false,
-      }) 
+      })
     end
   },
 }
