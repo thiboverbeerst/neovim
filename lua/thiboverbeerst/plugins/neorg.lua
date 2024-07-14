@@ -14,6 +14,8 @@ return {
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.export"] = {}, -- Exports .norg file into any other supported filetype
+        ["core.export.markdown"] = {}, -- Interface for `core.export` to allow exporting to markdown
       }
     },
     dependencies = {
